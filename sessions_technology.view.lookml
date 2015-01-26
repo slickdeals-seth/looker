@@ -83,7 +83,7 @@
       WHERE rank = 1  
       GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
     
-    sql_trigger_value: SELECT COUNT(*) FROM ${sessions_source.SQL_TABLE_NAME}
+    #sql_trigger_value: SELECT COUNT(*) FROM ${sessions_source.SQL_TABLE_NAME}
     
     distkey: domain_userid
     sortkeys: [domain_userid, domain_sessionidx]

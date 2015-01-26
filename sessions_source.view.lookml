@@ -48,7 +48,7 @@
         GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12) AS t
       WHERE "rank" = 1 -- Only pull the first referer for each visit
     
-    sql_trigger_value: SELECT COUNT(*) FROM ${sessions_last_page.SQL_TABLE_NAME}
+    #sql_trigger_value: SELECT COUNT(*) FROM ${sessions_last_page.SQL_TABLE_NAME}
     distkey: domain_userid
     sortkeys: [domain_userid, domain_sessionidx]
     persist_for: 1 second

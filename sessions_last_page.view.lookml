@@ -31,7 +31,7 @@
           LAST_VALUE(page_urlpath) OVER (PARTITION BY domain_userid, domain_sessionidx ORDER BY dvce_tstamp, event_id ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS page_urlpath
         FROM atomic.events) AS a
       GROUP BY 1,2,3,4
-    sql_trigger_value: SELECT COUNT(*) FROM ${sessions_landing_page.SQL_TABLE_NAME} # Generate this table after the sessions_landing page
+    #sql_trigger_value: SELECT COUNT(*) FROM ${sessions_landing_page.SQL_TABLE_NAME} # Generate this table after the sessions_landing page
     distkey: domain_userid
     sortkeys: [domain_userid, domain_sessionidx]
     persist_for: 1 second

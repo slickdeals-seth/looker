@@ -30,7 +30,7 @@
         AND domain_userid <> ''
       GROUP BY 1
       
-    sql_trigger_value: SELECT COUNT(*) FROM ${sessions.SQL_TABLE_NAME}
+    #sql_trigger_value: SELECT COUNT(*) FROM ${sessions.SQL_TABLE_NAME}
     distkey: domain_userid
     sortkeys: [domain_userid]
     persist_for: 1 second
