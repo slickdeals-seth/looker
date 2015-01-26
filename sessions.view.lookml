@@ -87,9 +87,10 @@
         ON s.domain_userid = t.domain_userid AND
         s.domain_sessionidx = t.domain_sessionidx
     
-    sql_trigger_value: SELECT COUNT(*) FROM ${sessions_technology.SQL_TABLE_NAME}
+    #sql_trigger_value: SELECT COUNT(*) FROM ${sessions_technology.SQL_TABLE_NAME}
     distkey: domain_userid
     sortkeys: [domain_userid, domain_sessionidx, session_start_ts]
+    persist_for: 1 second
     
   fields:
   # DIMENSIONS #

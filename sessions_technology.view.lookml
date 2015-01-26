@@ -87,6 +87,7 @@
     
     distkey: domain_userid
     sortkeys: [domain_userid, domain_sessionidx]
+    persist_for: 1 second
     
   fields:
   

@@ -36,9 +36,10 @@
       ORDER BY tr_orderid
     
     
-    sql_trigger_value: SELECT MAX(collector_tstamp) FROM atomic.events
+    #sql_trigger_value: SELECT MAX(collector_tstamp) FROM atomic.events
     distkey: domain_userid
     sortkeys: [domain_sessionidx, tr_orderid]
+    persist_for: 1 second
     
   fields:
   

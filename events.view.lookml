@@ -65,9 +65,10 @@
       FROM atomic.events
       WHERE domain_userid IS NOT NULL
     
-    sql_trigger_value: SELECT MAX(collector_tstamp) FROM atomic.events
+    #sql_trigger_value: SELECT MAX(collector_tstamp) FROM atomic.events
     distkey: domain_userid
     sortkeys: [domain_userid, domain_sessionidx, collector_tstamp]
+    persist_for: 1 second
     
   fields:
   # DIMENSIONS #

@@ -46,9 +46,10 @@
         AND s.domain_sessionidx = 1
         
     
-    sql_trigger_value: SELECT COUNT(*) FROM ${visitors_basic.SQL_TABLE_NAME}
+    #sql_trigger_value: SELECT COUNT(*) FROM ${visitors_basic.SQL_TABLE_NAME}
     distkey: domain_userid
     sortkeys: [domain_userid, first_touch]
+    persist_for: 1 second
   
   
   fields:

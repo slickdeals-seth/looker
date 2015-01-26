@@ -58,6 +58,7 @@
     sql_trigger_value: SELECT COUNT(*) FROM ${sessions_basic.SQL_TABLE_NAME} # Generate this table *after* the sessions_basic table is generated
     distkey: domain_userid
     sortkeys: [domain_userid, domain_sessionidx]
+    persist_for: 1 second
     
   fields:
   

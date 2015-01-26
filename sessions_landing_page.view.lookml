@@ -34,7 +34,8 @@
     sql_trigger_value: SELECT COUNT(*) FROM ${sessions_geo.SQL_TABLE_NAME} # Generate this table after the sessions_geo table
     distkey: domain_userid
     sortkeys: [domain_userid, domain_sessionidx]
-
+    persist_for: 1 second
+    
   fields:
     
   # DIMENSIONS #

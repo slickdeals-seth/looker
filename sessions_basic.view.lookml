@@ -34,7 +34,7 @@
     sql_trigger_value: SELECT MAX(collector_tstamp) FROM ${events.SQL_TABLE_NAME}  # Trigger table generation when new data loaded into atomic.events
     distkey: domain_userid
     sortkeys: [domain_userid, domain_sessionidx]
-    
+    persist_for: 1 second
 
   fields:
   

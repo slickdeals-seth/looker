@@ -30,9 +30,10 @@
       GROUP BY 1,2,3,4,5,5,6
       ORDER BY ti_orderid
     
-    sql_trigger_value: SELECT MAX(collector_tstamp) FROM atomic.events
+    #sql_trigger_value: SELECT MAX(collector_tstamp) FROM atomic.events
     distkey: ti_orderid
     sortkeys: [ti_orderid]
+    persist_for: 1 second
        
     distkey: ti_orderid
     sortkeys: ti_orderid
