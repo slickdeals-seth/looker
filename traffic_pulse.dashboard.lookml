@@ -139,25 +139,25 @@
     legend_align:
 
 
-  - name: sessions_by_country_map 
-    title: Sessions count by country
-    type: looker_geo_choropleth
-    map: world
-    base_view: sessions
-    dimensions: [sessions.geography_country_three_letter_iso_code]
-    measures: [sessions.count, sessions.events_per_session]
-    listen:
-      date: sessions.start_date
-      referer_medium: sessions.referer_medium
-      new_vs_returning: sessions.new_vs_returning_visitor
-      country: sessions.geography_country
-      landing_page: sessions.landing_page_path
-      referer_host: sessions.referer_url_host
-    sorts: [sessions.count desc]
-    limit: 500
-    width: 6
-    height: 4
-    legend_align:
+  #- name: sessions_by_country_map 
+  #  title: Sessions count by country
+  #  type: looker_geo_choropleth
+  #  map: world
+  #  base_view: sessions
+  #  dimensions: [sessions.geography_country_three_letter_iso_code]
+  #  measures: [sessions.count, sessions.events_per_session]
+  #  listen:
+  #    date: sessions.start_date
+  #    referer_medium: sessions.referer_medium
+  #    new_vs_returning: sessions.new_vs_returning_visitor
+  #    country: sessions.geography_country
+  #    landing_page: sessions.landing_page_path
+  #    referer_host: sessions.referer_url_host
+  #  sorts: [sessions.count desc]
+  #  limit: 500
+  #  width: 6
+  #  height: 4
+  #  legend_align:
 
   - name: new_vs_returning_visitors_by_day
     title: "New vs returning visitors"
@@ -318,7 +318,7 @@
       landing_page: sessions.landing_page_path
       referer_host: sessions.referer_url_host
     sorts: [sessions.count desc]
-    inner_radius: 75%
+    inner_radius: 75
     limit: 500
     width:
     height:
@@ -339,7 +339,7 @@
       landing_page: sessions.landing_page_path
       referer_host: sessions.referer_url_host
     sorts: [sessions.count desc]
-    inner_radius: 75%
+    inner_radius: 75
     limit: 500
     width:
     height:
