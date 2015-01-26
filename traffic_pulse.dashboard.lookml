@@ -29,31 +29,31 @@
 
   - name: new_vs_returning
     title: "New vs returning visitors"
-    type: select_filter
+    type: suggest_filter
     base_view: sessions
     dimension: sessions.new_vs_returning_visitor
   
   - name: referer_medium
     title: "Referer medium"
-    type: select_filter
+    type: suggest_filter
     base_view: sessions
     dimension: sessions.referer_medium
     
   - name: referer_host
     title: "Referer URL host"
-    type: select_filter
+    type: suggest_filter
     base_view: sessions
     dimension: sessions.referer_url_host
 
   - name: country
     title: Country
-    type: select_filter
+    type: suggest_filter
     base_view: sessions
     dimension: sessions.geography_country
     
   - name: landing_page
     title: "Landing page path"
-    type: select_filter
+    type: suggest_filter
     base_view: sessions
     dimension: sessions.landing_page_path
     

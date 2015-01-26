@@ -65,9 +65,9 @@
     type: count_distinct
     sql: ${event_id}
 
-  - measure: cpm_cost
-    type: number
-    decimals: 2
-    sql: SUM(${cost})/1000
-    filters:
-      cost_model: "cpm"
+  #- measure: cpm_cost
+  #  type: number
+  #  decimals: 2
+  #  sql: SUM(${cost})/1000
+  #  filters:
+  #    cost_model: "cpm"
